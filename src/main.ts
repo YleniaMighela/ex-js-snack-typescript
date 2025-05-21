@@ -55,7 +55,7 @@ type Dipendente = {
 const utente: Dipendente = {
   nome: "Anna",
   cognome: "Rossi",
-  annoNascita: 30,
+  annoNascita: 1990,
   sesso: "f",
   anniDiServizio: [2000, 2004.2007],
   emailAziendale: "Anna@gmail.com",
@@ -63,3 +63,50 @@ const utente: Dipendente = {
 }
 
 console.log(utente);
+
+
+// SNACK 02
+type Developer = Dipendente & {
+  livelloEsperienza: "Junior" | "Mid" | "Senior",
+  linguaggi?: string[],
+  certificazioni: string[]
+}
+
+const developer: Developer = {
+  nome: "Adrea",
+  cognome: "Rossi",
+  annoNascita: 1990,
+  sesso: "f",
+  anniDiServizio: [2000, 2004.2007],
+  emailAziendale: "Anna@gmail.com",
+  contratto: "indeterminato",
+  livelloEsperienza: "Junior",
+  linguaggi: ["javascript"],
+  certificazioni: ["boolean"]
+}
+
+console.log(developer);
+
+
+
+type ProjectManager = Dipendente & {
+  teamSize: number | null,
+  budgetGestito?: number,
+  stakeholderPrincipali: string[]
+}
+
+
+const pm: ProjectManager = {
+  nome: "Marco",
+  cognome: "Rossi",
+  annoNascita: 1990,
+  sesso: "f",
+  anniDiServizio: [2000, 2004.2007],
+  emailAziendale: "Anna@gmail.com",
+  contratto: "indeterminato",
+  teamSize: 4,
+  budgetGestito: 40000,
+  stakeholderPrincipali: ["CEO"]
+}
+
+console.log(pm);
