@@ -1,3 +1,4 @@
+// SNACK 01
 // dato sconosciuto
 let dato: unknown;
 // Se è una stringa: stampala in maiuscolo
@@ -31,11 +32,18 @@ else if (dato instanceof Promise) {
 
 }
 
-
-
 // In tutti gli altri casi 
 else {
   console.log("Tipo non supportato")
 
 }
 
+
+// SNACK 02
+type Dipendente = {
+  nome: string,
+  cognome: string,
+  annoNascita: number,
+  sesso: "m" | "f",
+  anniDiServizio: number[]
+}
