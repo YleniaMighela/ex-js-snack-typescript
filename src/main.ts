@@ -14,6 +14,25 @@ else if (typeof dato === 'boolean') {
   console.log(dato ? "Si" : "No");
 
 }
+// BONUS
+// Se è null: stampa “Il dato è vuoto”
+else if (dato === null) {
+  console.log("Il dato è vuoto");
+
+
+}
+// Se è un array: stampa la sua lunghezza
+else if (Array.isArray(dato)) {
+  console.log(dato.length);
+}
+// Se è una Promise: attendi che si risolva e stampa il valore del resolve.
+else if (dato instanceof Promise) {
+  dato.then((mes) => console.log("Promises risolta", mes))
+
+}
+
+
+
 // In tutti gli altri casi 
 else {
   console.log("Tipo non supportato")
