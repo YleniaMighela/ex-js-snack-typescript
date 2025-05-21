@@ -110,3 +110,20 @@ const pm: ProjectManager = {
 }
 
 console.log(pm);
+
+// BONUS 
+type Team = {
+  nome: string,
+  progettoAttuale: string | null,
+  budget: number,
+  membri: [ProjectManager, ...Developer[]]
+}
+
+const team: Team = {
+  nome: "Luca",
+  progettoAttuale: "Bool",
+  budget: 200000,
+  membri: [pm, developer]
+}
+
+console.log(team);
