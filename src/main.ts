@@ -45,5 +45,21 @@ type Dipendente = {
   cognome: string,
   annoNascita: number,
   sesso: "m" | "f",
-  anniDiServizio: number[]
+  anniDiServizio: number[],
+  readonly emailAziendale: string,
+  contratto: "indeterminato" | "determinato" | "freelance"
 }
+
+// Dipendente
+
+const utente: Dipendente = {
+  nome: "Anna",
+  cognome: "Rossi",
+  annoNascita: 30,
+  sesso: "f",
+  anniDiServizio: [2000, 2004.2007],
+  emailAziendale: "Anna@gmail.com",
+  contratto: "indeterminato"
+}
+
+console.log(utente);
